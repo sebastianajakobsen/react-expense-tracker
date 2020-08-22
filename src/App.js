@@ -27,6 +27,10 @@ function App() {
         },
     ])
 
+    function addTransaction(transaction) {
+        setTransaction([...transactions, transaction])
+    }
+
     function removeTransaction(id) {
         setTransaction(transactions.filter(transaction => transaction.id !== id));
     }
@@ -39,7 +43,7 @@ function App() {
                 <TransactionBalance transactions={transactions}/>
                 <TransactionIncomeExpense transactions={transactions}/>
                 <TransactionList removeTransaction={removeTransaction} transactions={transactions}/>
-                <TransactionForm/>
+                <TransactionForm addTransaction={addTransaction}/>
             </div>
         </div>
     );
