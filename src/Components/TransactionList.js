@@ -1,11 +1,18 @@
 import React from 'react';
 import Transaction from "./Transaction";
 
-function TransactionList(props) {
+function TransactionList({transactions}) {
     return (
         <div>
             <h4 className="border-b text-xl font-bold">History</h4>
-            <Transaction/>
+            <ul className="mb-16">
+            {
+                transactions.map(transaction => (
+                    <Transaction transaction={transaction}/>
+                ))
+            }
+            </ul>
+
         </div>
     );
 }
