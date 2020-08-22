@@ -1,6 +1,11 @@
 import React from 'react';
 
-function Transaction({transaction}) {
+function Transaction({transaction, removeTransaction}) {
+
+    function handleButtonClick() {
+        removeTransaction(transaction.id);
+    }
+
     return (
 
             <li className="border-r-4 shadow-sm flex justify-between p-3 my-3 relative" style={{
@@ -10,7 +15,7 @@ function Transaction({transaction}) {
                 <span style={{color:transaction.amount > 0 ? 'green': 'red'}}>
                     {transaction.amount}
                 </span>
-                <button className="delete-btn">x</button>
+                <button onClick={handleButtonClick} className="delete-btn">x</button>
             </li>
 
     );

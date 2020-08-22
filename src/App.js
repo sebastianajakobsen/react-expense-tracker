@@ -27,6 +27,10 @@ function App() {
         },
     ])
 
+    function removeTransaction(id) {
+        setTransaction(transactions.filter(transaction => transaction.id !== id));
+    }
+
     return (
         <div
             className="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 px-3 py-10 bg-gray-200 flex justify-center">
@@ -34,7 +38,7 @@ function App() {
                 <Header/>
                 <TransactionBalance transactions={transactions}/>
                 <TransactionIncomeExpense transactions={transactions}/>
-                <TransactionList transactions={transactions}/>
+                <TransactionList removeTransaction={removeTransaction} transactions={transactions}/>
                 <TransactionForm/>
             </div>
         </div>
