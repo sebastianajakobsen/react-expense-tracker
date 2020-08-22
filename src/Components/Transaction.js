@@ -2,6 +2,8 @@ import React from 'react';
 
 function Transaction({transaction, removeTransaction}) {
 
+    const sign = transaction.amount > 0 ? '$': '-$';
+
     function handleButtonClick() {
         removeTransaction(transaction.id);
     }
@@ -13,7 +15,7 @@ function Transaction({transaction, removeTransaction}) {
             }}>
                 {transaction.text}
                 <span style={{color:transaction.amount > 0 ? 'green': 'red'}}>
-                    {transaction.amount}
+                    {sign}{Math.abs(transaction.amount)}
                 </span>
                 <button onClick={handleButtonClick} className="delete-btn">x</button>
             </li>
