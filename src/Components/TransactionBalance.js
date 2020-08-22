@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Balance() {
+function TransactionBalance() {
     return (
         <div>
             <h3 className="uppercase font-medium text-lg">
@@ -13,4 +13,4 @@ function Balance() {
     );
 }
 
-export default Balance;
+export default TransactionBalance;
