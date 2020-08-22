@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './index.css';
 import Header from "./Components/Header";
 import TransactionBalance from "./Components/TransactionBalance";
-import IncomeExpense from "./Components/IncomeExpense";
+import TransactionIncomeExpense from "./Components/TransactionIncomeExpense";
 import TransactionList from "./Components/TransactionList";
 import TransactionForm from "./Components/TransactionForm";
 
@@ -33,7 +33,7 @@ function App() {
             <div className="w-full max-w-xs bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <Header/>
                 <TransactionBalance transactions={transactions}/>
-                <IncomeExpense/>
+                <TransactionIncomeExpense/>
                 <TransactionList transactions={transactions}/>
                 <TransactionForm/>
             </div>
