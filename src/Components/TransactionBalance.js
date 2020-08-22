@@ -1,13 +1,17 @@
 import React from 'react';
 
-function TransactionBalance() {
+function TransactionBalance({transactions}) {
+
+    const amounts = transactions.map(transaction => transaction.amount);
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+
     return (
         <div>
             <h3 className="uppercase font-medium text-lg">
                 YOUR BALANCE
             </h3>
             <h1 className="text-3xl font-bold leading-none">
-                $0.00
+                ${total}
             </h1>
         </div>
     );

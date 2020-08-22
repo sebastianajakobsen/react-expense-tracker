@@ -32,7 +32,7 @@ function App() {
             className="rounded-t-lg overflow-hidden border-t border-l border-r border-gray-400 px-3 py-10 bg-gray-200 flex justify-center">
             <div className="w-full max-w-xs bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <Header/>
-                <TransactionBalance/>
+                <TransactionBalance transactions={transactions}/>
                 <IncomeExpense/>
                 <TransactionList transactions={transactions}/>
                 <TransactionForm/>
