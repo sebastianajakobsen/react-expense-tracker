@@ -33,7 +33,7 @@ function App() {
             <div className="w-full max-w-xs bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <Header/>
                 <TransactionBalance transactions={transactions}/>
-                <TransactionIncomeExpense/>
+                <TransactionIncomeExpense transactions={transactions}/>
                 <TransactionList transactions={transactions}/>
                 <TransactionForm/>
             </div>

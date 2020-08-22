@@ -8,7 +8,7 @@ function TransactionList({transactions}) {
             <ul className="mb-16">
             {
                 transactions.map(transaction => (
-                    <Transaction transaction={transaction}/>
+                    <Transaction key={transaction.id} transaction={transaction}/>
                 ))
             }
             </ul>
